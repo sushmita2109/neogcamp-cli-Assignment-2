@@ -62,7 +62,8 @@ function levelUp(score)
 
 function play(question,answer){
   var useranswer=readlineSync.question(question);
-    if(useranswer===answer)
+  var answers=useranswer.toLowerCase();
+    if(answers===answer)
     {
       console.log('You are correct');
       score=score+1;
